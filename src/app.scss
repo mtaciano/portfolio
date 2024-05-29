@@ -159,6 +159,7 @@ ul {
   --english-violet: #585885;
   --lavender: #d9d3e8;
   --space-cadet: #3b3b59;
+  --night: #0a0a0a;
 
   /* Contrast colors */
   --theme-color-stronger: var(--lavender);
@@ -170,7 +171,7 @@ ul {
   --theme-color-fainter: var(--space-cadet);
 
   /* Background color */
-  --bg-color: var(--oxford-blue);
+  --bg-color: var(--night);
 
   /* Text colors */
   --text-color-stronger: var(--seasalt);
