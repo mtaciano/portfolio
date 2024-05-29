@@ -206,6 +206,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 300 900;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Lexend (Sans Serif) */
@@ -215,6 +216,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 /* JetBrains Mono (Monospace) */
@@ -224,6 +226,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 100 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Mono";
@@ -231,4 +234,5 @@ ul {
   font-optical-sizing: auto;
   font-weight: 100 800;
   font-style: italic;
+  font-display: swap;
 }
