@@ -1,13 +1,18 @@
 <script>
-  const unifesp = "/";
-  const jigsaw = "/";
-  const risc = "/";
-  const cminus = "/";
-  const sol = "/";
+  const unifesp = "https://www.unifesp.br";
+  const jigsaw = "https://doi.org/10.5753/wvc.2023.27545";
+  const risc = "https://github.com/mtaciano/fpgmips";
+  const cminus = "https://github.com/mtaciano/cmc";
+  const sol = "https://github.com/mtaciano/sol";
 </script>
 
 <svelte:head>
   <title>Miguel Taciano</title>
+  <meta name="description" content="Miguel Taciano's portfolio" />
+  <meta
+    name="keywords"
+    content="SolidJS, SolidStart, TailwindCSS, Portfolio, Computer Engineer, Unifesp"
+  />
 </svelte:head>
 
 <h1 class="title">Miguel Taciano</h1>

@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Miguel Taciano :: 404</title>
+</svelte:head>
+
 <div class="outer">
   <h1>404</h1>
   <h2>Oops! Page not found.</h2>

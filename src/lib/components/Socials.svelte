@@ -5,28 +5,19 @@
   const size = "1.875rem";
   const color = "var(--button-color)";
 
-  // const linkedin = "https://www.linkedin.com/in/mtaciano/";
-  // const github = "https://www.github.com/mtaciano/";
-  // const email = "mailto:contact@mtaciano.com";
-  const linkedin = "/";
-  const github = "/";
-  const email = "/";
+  const linkedin = "https://www.linkedin.com/in/mtaciano/";
+  const github = "https://www.github.com/mtaciano/";
+  const email = "mailto:contact@mtaciano.com";
 </script>
 
 <div class="socials">
-  <a
-    onmouseenter={() => console.log("adfs")}
-    onmouseleave={() => console.log("xxxxx")}
-    onfocus={() => console.log("kkkk")}
-    class="socials-item"
-    href={linkedin}
-  >
+  <a target="_blank" class="socials-item" href={linkedin}>
     <Linkedin {strokeWidth} {size} {color} />
   </a>
-  <a class="socials-item" href={github}>
+  <a target="_blank" class="socials-item" href={github}>
     <Github {strokeWidth} {size} {color} />
   </a>
-  <a class="socials-item" href={email}>
+  <a target="_blank" class="socials-item" href={email}>
     <Mail {strokeWidth} {size} {color} />
   </a>
 </div>

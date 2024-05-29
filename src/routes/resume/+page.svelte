@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Miguel Taciano :: Résumé</title>
+</svelte:head>
+
 <h1>Résumé</h1>
 
 <style lang="scss">

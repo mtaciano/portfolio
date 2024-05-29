@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Miguel Taciano :: Blog</title>
+</svelte:head>
+
 <h1>Blog</h1>
 
 <style lang="scss">

@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Miguel Taciano :: Research</title>
+</svelte:head>
+
 <h1>Research</h1>
 
 <style lang="scss">

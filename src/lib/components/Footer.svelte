@@ -1,12 +1,12 @@
 <script>
   import Socials from "./Socials.svelte";
 
-  const sshKey = "/";
-  const gpgKey = "/";
-  const svelteKit = "/";
-  const lucide = "/";
-  const simpleIcons = "/";
-  const ccbysa = "/";
+  const sshKey = "/pubkeys/mtaciano.ssh.pub";
+  const gpgKey = "/pubkeys/mtaciano.gpg.asc";
+  const svelteKit = "https://kit.svelte.dev";
+  const lucide = "https://lucide.dev";
+  const simpleIcons = "https://simpleicons.org";
+  const mit = "https://opensource.org/license/mit";
 </script>
 
 <footer class="outer">
@@ -15,12 +15,12 @@
       <Socials />
     </div>
     <div class="keys">
-      <a href={sshKey}
+      <a href={sshKey} target="_blank" download
         ><abbr title="SHA256:CcdAWEMdTf7LzNt9kWB7SGQHFs0K1kF8ldA3NdbaSJk"
           >CcdAWE...dbaSJk</abbr
         > (SSH)</a
       >
-      <a href={gpgKey}
+      <a href={gpgKey} target="_blank" download
         ><abbr title="8313A90354AA2D6139FAE531F059B8F3B9AE19D4"
           >8313A9...AE19D4</abbr
         > (GPG)</a
@@ -28,12 +28,12 @@
     </div>
   </div>
   <div class="lower">
-    <p>Made with <a href={svelteKit}>SvelteKit</a></p>
+    <p>Made with <a target="_blank" href={svelteKit}>SvelteKit</a></p>
     <p>
-      Icons by <a href={lucide}>Lucide</a> and
-      <a href={simpleIcons}>Simple Icons</a>
+      Icons by <a target="_blank" href={lucide}>Lucide</a> and
+      <a target="_blank" href={simpleIcons}>Simple Icons</a>
     </p>
-    <p>(c) 2024 Miguel Silva Taciano (<a href={ccbysa}>CC BY-SA 4.0</a>)</p>
+    <p>(c) 2024 Miguel Silva Taciano (<a target="_blank" href={mit}>MIT</a>)</p>
   </div>
 </footer>
 
