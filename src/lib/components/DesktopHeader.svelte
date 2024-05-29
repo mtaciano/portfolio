@@ -38,7 +38,7 @@
 <style lang="scss">
   .outer {
     display: none;
-    @media (min-width: $header-transition-size) {
+    @media (min-width: $transition-size) {
       display: flex;
     }
     flex-flow: row;
@@ -119,7 +119,7 @@
   * {
     display: none;
   }
-  @media (min-width: $header-transition-size) {
+  @media (min-width: $transition-size) {
     * {
       display: block;
     }

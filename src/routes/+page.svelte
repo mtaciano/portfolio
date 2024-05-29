@@ -116,7 +116,7 @@
       right: 1rem;
     }
 
-    @media (min-width: $header-transition-size) {
+    @media (min-width: $transition-size) {
       max-width: 36rem;
     }
   }

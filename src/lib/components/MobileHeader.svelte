@@ -85,7 +85,7 @@
       }
     }
 
-    @media (min-width: $header-transition-size) {
+    @media (min-width: $transition-size) {
       display: none;
     }
   }
@@ -165,7 +165,7 @@
     }
   }
 
-  @media (min-width: $header-transition-size) {
+  @media (min-width: $transition-size) {
     * {
       display: none;
     }
