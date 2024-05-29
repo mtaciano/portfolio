@@ -1,0 +1,234 @@
+@import "../node_modules/modern-normalize/modern-normalize.css";
+
+/*
+ * Remove all of the default margins from elements like headings, blockquotes,
+ * paragraphs, etc.
+ *
+ * This makes it harder to accidentally rely on margin values applied by
+ * the user-agent stylesheet that are not part of your spacing scale.
+ */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+/*
+ * All heading elements are completely unstyled by default, and have the same
+ * font-size and font-weight as normal text.
+ *
+ * In UI development, headings should often be visually de-emphasized. Making
+ * headings unstyled by default means any styling you apply to headings happens
+ * consciously and deliberately.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+ * Images and other elements (like `svg`, `video`, `canvas`, and others)
+ * are `display: block` by default.
+ *
+ * This helps to avoid unexpected alignment issues that you often run into
+ * using the browser default of `display: inline`.
+ */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+/*
+ * Images and videos are constrained to the parent width in a way that
+ * preserves their intrinsic aspect ratio.
+ *
+ * This prevents them from overflowing their containers and makes them
+ * responsive by default.
+ */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Ordered and unordered lists are unstyled by default, with no bullets/numbers
+ * and no margin or padding.
+ */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  @include transition;
+
+  /* Contrast colors */
+  --oxford-blue: #000829;
+  --phthalo-blue: #011890;
+  --egyptian-blue: #20329c;
+  --violet-blue: #3f4ca8;
+  --glaucous: #7d7fbf;
+  --thistle: #bbb2d7;
+  --lavender: #d7d2e8;
+  --ghost-white: #f3f2f8;
+
+  --theme-color-fainter: var(--lavender);
+  --theme-color-faint: var(--thistle);
+  --theme-color-weaker: var(--glaucous);
+  --theme-color-weak: var(--violet-blue);
+  --theme-color-normal: var(--egyptian-blue);
+  --theme-color-strong: var(--phthalo-blue);
+  --theme-color-stronger: var(--oxford-blue);
+
+  /* Background color */
+  --bg-color: var(--ghost-white);
+  background-color: var(--bg-color);
+
+  /* Text colors */
+  --richier-black: #030712;
+  --rich-black: #131721;
+  --raisin-black: #222630;
+  --charcoal: #41444d;
+  --gray: #7e8187;
+  --silver: #bdbec1;
+  --platinum: #dbdcde;
+  --seasalt: #f9fafb;
+
+  --text-color-fainter: var(--platinum);
+  --text-color-faint: var(--silver);
+  --text-color-weaker: var(--gray);
+  --text-color-weak: var(--charcoal);
+  --text-color-normal: var(--raisin-black);
+  --text-color-strong: var(--rich-black);
+  --text-color-stronger: var(--richier-black);
+  color: var(--text-color-weak);
+
+  --border-color: var(--text-color-faint);
+  --border-width: 2px;
+  --border-radius: 1.25rem;
+  --border-inner-radius: 1rem;
+
+  --button-size: 3.125rem;
+  --button-color: var(--text-color-weak);
+  --button-active-background: var(--theme-color-faint);
+  --button-selected-background: var(--theme-color-fainter);
+  --button-inner-size: 2.5rem;
+
+  --font-serif: "Frank Ruhl Libre", serif;
+  --font-sans: "Lexend", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  min-height: 100%;
+}
+
+.dark {
+  --ultra-violet: #68699e;
+  --wisteria: #aca6d1;
+  --platinum: #e0e0e0;
+  --seasalt: #fcfcfc;
+  --anti-flash-white: #eeeeee;
+  --white: #fefefe;
+  --cadet-gray: #a1a1a1;
+  --thistle: #bbb2d7;
+  --gray: #818181;
+  --silver: #d0d0d0;
+  --english-violet: #585885;
+  --lavender: #d9d3e8;
+  --space-cadet: #3b3b59;
+
+  /* Contrast colors */
+  --theme-color-stronger: var(--lavender);
+  --theme-color-strong: var(--thistle);
+  --theme-color-normal: var(--wisteria);
+  --theme-color-weak: var(--glaucous);
+  --theme-color-weaker: var(--ultra-violet);
+  --theme-color-faint: var(--english-violet);
+  --theme-color-fainter: var(--space-cadet);
+
+  /* Background color */
+  --bg-color: var(--oxford-blue);
+
+  /* Text colors */
+  --text-color-stronger: var(--seasalt);
+  --text-color-strong: var(--anti-flash-white);
+  --text-color-normal: var(--platinum);
+  --text-color-weak: var(--silver);
+  --text-color-weaker: var(--cadet-gray);
+  --text-color-faint: var(--gray);
+  --text-color-fainter: var(--rich-black);
+
+  /* Update state (don't change) */
+  color: var(--text-color-weak);
+  background-color: var(--bg-color);
+  --border-color: var(--text-color-faint);
+  --button-color: var(--text-color-weak);
+  --button-active-background: var(--theme-color-weak);
+  --button-selected-background: var(--theme-color-weaker);
+  --button-active-background: var(--theme-color-faint);
+  --button-selected-background: var(--theme-color-fainter);
+}
+
+* {
+  font-family: var(--font-sans);
+
+  /* Remove blue highlight when tapping in a mobile device */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Frank Ruhl Libre (Serif) */
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  src: url("/fonts/frank_ruhl_libre/frank_ruhl_libre.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+/* Lexend (Sans Serif) */
+@font-face {
+  font-family: "Lexend";
+  src: url("/fonts/lexend/lexend.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* JetBrains Mono (Monospace) */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains_mono/jetbrains_mono.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains_mono/jetbrains_mono_italic.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 800;
+  font-style: italic;
+}

@@ -1,0 +1,26 @@
+@mixin flex-center($direction: inherit) {
+  display: flex;
+  flex-flow: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border {
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--border-color);
+}
+
+@mixin transition($function: ease) {
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: $function;
+}
+
+@mixin color-gradient(
+  $color1: var(--theme-blue-1),
+  $color2: var(--theme-blue-2)
+) {
+  background: linear-gradient(90deg, $color1 0%, $color2 100%);
+  color: transparent;
+  background-clip: text;
+}
