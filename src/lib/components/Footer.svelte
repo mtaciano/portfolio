@@ -71,6 +71,7 @@
   .upper {
     @include flex-center(row);
 
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 0.625rem;
   }

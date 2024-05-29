@@ -23,7 +23,7 @@
   h1 {
     color: var(--theme-color-weaker);
     font: {
-      size: 10rem;
+      size: clamp(8rem, 20vw, 10rem);
       weight: 900;
     }
     line-height: 1;
