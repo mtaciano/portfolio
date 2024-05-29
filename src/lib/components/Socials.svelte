@@ -11,13 +11,13 @@
 </script>
 
 <div class="socials">
-  <a target="_blank" class="socials-item" href={linkedin}>
+  <a target="_blank" class="socials-item" href={linkedin} aria-label="LinkedIn">
     <Linkedin {strokeWidth} {size} {color} />
   </a>
-  <a target="_blank" class="socials-item" href={github}>
+  <a target="_blank" class="socials-item" href={github} aria-label="GitHub">
     <Github {strokeWidth} {size} {color} />
   </a>
-  <a target="_blank" class="socials-item" href={email}>
+  <a target="_blank" class="socials-item" href={email} aria-label="e-mail">
     <Mail {strokeWidth} {size} {color} />
   </a>
 </div>

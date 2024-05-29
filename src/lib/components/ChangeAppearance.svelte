@@ -12,7 +12,12 @@
   });
 </script>
 
-<button onclick={() => (isDarkMode = !isDarkMode)} type="button" class="menu">
+<button
+  onclick={() => (isDarkMode = !isDarkMode)}
+  type="button"
+  class="menu"
+  aria-label="Change appearance"
+>
   <div class="menu-inner">
     {#if !isDarkMode}
       <Sun strokeWidth={2} size="1.875rem" color="var(--button-color)" />

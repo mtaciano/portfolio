@@ -2,7 +2,12 @@
   let { isOpen = $bindable(false) } = $props();
 </script>
 
-<button type="button" class="menu" onclick={() => (isOpen = !isOpen)}>
+<button
+  type="button"
+  class="menu"
+  onclick={() => (isOpen = !isOpen)}
+  aria-label="Navigation menu"
+>
   <div class="menu-inner">
     <span class="menu-bar" class:menu-open={isOpen}></span>
     <span class="menu-bar" class:menu-open={isOpen}></span>

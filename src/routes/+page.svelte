@@ -23,26 +23,28 @@
   <p>
     Hello! I'm a computer engineer who recently received my bachelor's degree
     from
-    <a href={unifesp}>Universidade Federal de São Paulo</a>, in Brazil. I'm
-    interested in all computer-related fields, such as web development, security
-    and cryptography, language design, embedded systems and more. My current
-    most-used languages are C, Python and Rust.
+    <a target="_blank" href={unifesp}>Universidade Federal de São Paulo</a>, in
+    Brazil. I'm interested in all computer-related fields, such as web
+    development, security and cryptography, language design, embedded systems
+    and more. My current most-used languages are C, Python and Rust.
   </p>
   <p>
     During my time at the university, my most researched fields were Machine
     learning (mainly Reinforcement Learning) and Computer Vision. In that
-    period, I developed a <a href={jigsaw}>Jigsaw Puzzle Solver</a> that used Semantic
-    Segmentation and Machine Learning to solve jigsaw puzzles (visual puzzles).
+    period, I developed a <a target="_blank" href={jigsaw}
+      >Jigsaw Puzzle Solver</a
+    > that used Semantic Segmentation and Machine Learning to solve jigsaw puzzles
+    (visual puzzles).
   </p>
   <p>
-    My other big project was the development of a <a href={risc}
+    My other big project was the development of a <a target="_blank" href={risc}
       >32-bit RISC CPU</a
     >
     using FPGAs (Field-Programmable Gate Arrays) and Verilog, for which I also developed
-    an <a href={cminus}>accompanying compiler</a> based on a small subset of the
-    C programming language. My current side project is a
-    <a href={sol}>complete rewrite</a> of it, with better code, more features and
-    fewer bugs!
+    an <a target="_blank" href={cminus}>accompanying compiler</a> based on a
+    small subset of the C programming language. My current side project is a
+    <a target="_blank" href={sol}>complete rewrite</a> of it, with better code, more
+    features and fewer bugs!
   </p>
 </article>
 
