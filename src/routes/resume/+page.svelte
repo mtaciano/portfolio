@@ -104,7 +104,7 @@
     </li>
   </ul>
   <p class="center space-top">
-    You can also view my résumé in <a href={resume}>PDF Format</a>.
+    You can also view my résumé in <a href={resume}>PDF format</a>.
   </p>
 </article>
 
