@@ -149,5 +149,14 @@
       color: var(--text-color-stronger);
       text-decoration-color: var(--theme-color-strong);
     }
+
+    &::after {
+      content: "↗";
+      font: {
+        family: var(--font-sans);
+        weight: 900;
+        size: 0.75em;
+      }
+    }
   }
 </style>

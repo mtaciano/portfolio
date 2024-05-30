@@ -21,16 +21,24 @@
   }
 
   h1 {
-    color: var(--theme-color-weaker);
+    color: var(--text-color-strong);
     font: {
       size: clamp(8rem, 20vw, 10rem);
       weight: 900;
     }
     line-height: 1;
+
+    text-decoration: {
+      line: underline;
+      style: solid;
+      color: var(--theme-color-weaker);
+      thickness: 0.175em;
+    }
+    padding-bottom: 2rem;
   }
 
   h2 {
-    color: var(--text-color-strong);
+    color: var(--text-color-normal);
     font: {
       size: 2.5rem;
       weight: 600;
@@ -48,12 +56,31 @@
   a {
     @include transition;
 
-    color: var(--theme-color-normal);
-    text-decoration: underline var(--theme-color-normal) 0.175rem;
+    color: var(--text-color-normal);
+    font-weight: 600;
+    padding: {
+      left: 0.125rem;
+      right: 0.125rem;
+    }
+    text-decoration: {
+      line: underline;
+      style: solid;
+      color: var(--theme-color-weaker);
+      thickness: 0.175em;
+    }
 
     &:hover {
-      color: var(--theme-color-weaker);
-      text-decoration-color: var(--theme-color-weaker);
+      color: var(--text-color-stronger);
+      text-decoration-color: var(--theme-color-strong);
+    }
+
+    &::after {
+      content: "↗";
+      font: {
+        family: var(--font-sans);
+        weight: 900;
+        size: 0.75em;
+      }
     }
   }
 </style>
