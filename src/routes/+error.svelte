@@ -21,16 +21,24 @@
   }
 
   h1 {
-    color: var(--theme-color-weaker);
+    color: var(--text-color-strong);
     font: {
       size: clamp(8rem, 20vw, 10rem);
       weight: 900;
     }
     line-height: 1;
+
+    text-decoration: {
+      line: underline;
+      style: solid;
+      color: var(--theme-color-weaker);
+      thickness: 0.175em;
+    }
+    padding-bottom: 2rem;
   }
 
   h2 {
-    color: var(--text-color-strong);
+    color: var(--text-color-normal);
     font: {
       size: 2.5rem;
       weight: 600;
