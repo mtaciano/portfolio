@@ -54,13 +54,15 @@
     font: {
       family: var(--font-serif);
       weight: 900;
-      size: 5.625rem;
+      size: clamp(4.625rem, 18vw, 6.625rem);
     }
     text-align: center;
     line-height: 1;
     padding: {
       top: 1.25rem;
       bottom: 1.25rem;
+      left: 1rem;
+      right: 1rem;
     }
     text-decoration: {
       line: underline;
@@ -75,13 +77,15 @@
     font: {
       family: var(--font-mono);
       weight: 800;
-      size: 2rem;
+      size: clamp(1.625rem, 6vw, 2.25rem);
       style: italic;
     }
     text-align: center;
     line-height: 1;
     padding: {
       bottom: 3.125rem;
+      left: 1rem;
+      right: 1rem;
     }
   }
 
@@ -116,7 +120,7 @@
       right: 1rem;
     }
 
-    @media (min-width: $header-transition-size) {
+    @media (min-width: $transition-size) {
       max-width: 36rem;
     }
   }
