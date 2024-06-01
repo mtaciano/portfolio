@@ -26,7 +26,7 @@
     <span class="block job italic highlight normal"
       ><a href={sol} target="_blank">Sol</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >The sol language, the spiritual successor of the C- language, developed
       to compile human-readable code into FPGMIPS machine code.</span
     >
@@ -37,7 +37,7 @@
     <span class="block job italic highlight normal"
       ><a href={redapro} target="_blank">redapro</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A by-the-spec implementation of the <span class="super-bold">Re</span
       >liable
       <span class="super-bold">Da</span>ta
@@ -52,7 +52,7 @@
     <span class="block job italic highlight normal"
       ><a href={monkeyScripts} target="_blank">Monkey Scripts</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A collection of scripts for grease/tamper/violent-monkey that I made and
       use sporadically.</span
     >
@@ -66,7 +66,7 @@
     <span class="block job italic highlight normal"
       ><a href={fpgmips} target="_blank">FPGMIPS</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A fully functional CPU based on the 32-bit RISC MIPS mono-cycle
       architecture. With it also comes an OS capable of preempting user-compiled
       programs. Those programs are currently written in C-, and in the future
@@ -79,7 +79,7 @@
     <span class="block job italic highlight normal"
       ><a href={cmc} target="_blank">CMC</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A compiler for the C- language, a subset of C. Created to be used with
       the FPGMIPS CPU. This compiler receives human-readable code as an input
       and outputs machine code instructions specifically tailored to the FPGMIPS
@@ -93,7 +93,7 @@
     <span class="block job italic highlight normal"
       ><a href={uartPhone} target="_blank">UART-Phone</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A simulation of the capabilities of conversing between two cellphones
       using FPGAs. This is done using Bluetooth. As the FPGAs connect with each
       other, they use the UART protocol to communicate between themselves.</span
@@ -105,7 +105,7 @@
     <span class="block job italic highlight normal"
       ><a href={mempager} target="_blank">mempager</a></span
     >
-    <span class="block bold small"
+    <span class="block"
       >A simulation of two different implemented paging algorithms hit-and-miss
       ratios as they move pages from the swap to the RAM and vice versa.
     </span>
@@ -136,10 +136,6 @@
 
   .block {
     display: block;
-  }
-
-  .small {
-    font-size: 1.25rem;
   }
 
   .smaller {
@@ -174,7 +170,7 @@
   .section-title {
     color: var(--text-color-strong);
     font: {
-      family: var(--font-serif);
+      family: var(--font-mono);
       weight: 800;
       size: 2.25rem;
     }
