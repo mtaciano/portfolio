@@ -1,0 +1,53 @@
+{
+  "professional": [
+    {
+      "title": "Data Analyst",
+      "company": "Johnson & Johnson",
+      "duration": "February 2023 — January 2024",
+      "location": "São Paulo, Brazil",
+      "responsibilities": [
+        "Development and maintenance of an information and utilities portal for use by all latin american countries.",
+        "Creation of technical documentation for dashboards containing crucial information for new users to understand these metrics.",
+        "Development of new dashboards, allowing monitoring and better decision-making by the various teams involved in the project.",
+        "Monitoring and classifying of thousands of users across related products, in order to label and categorize consumption patterns with the ultimate aim of improving the product, thus increasing the company's KPIs."
+      ]
+    },
+    {
+      "title": "Machine Learning Researcher",
+      "company": "Embraer & CNPq",
+      "duration": "February 2023 — January 2024",
+      "location": "São Paulo, Brazil",
+      "responsibilities": [
+        "Research and comparative analysis of state-of-the-art visual-puzzle solving methods using machine learning (mainly reinforcement learning) and computer vision aproaches, such as semantic segmentation.",
+        "Development of a state-of-the-art method of solving visual-puzzle problems, using machine learning and semantic segmentation."
+      ]
+    }
+  ],
+  "academic": [
+    {
+      "title": "BSc in Computer Engineering",
+      "company": "Universidade Federal de São Paulo (Unifesp)",
+      "duration": "February 2023 — January 2024",
+      "location": "São Paulo, Brazil",
+      "responsibilities": []
+    },
+    {
+      "title": "BSc in Science and Technology",
+      "company": "Universidade Federal de São Paulo (Unifesp)",
+      "duration": "March 2019 — February 2022",
+      "location": "São Paulo, Brazil",
+      "responsibilities": []
+    }
+  ],
+  "volunteer": [
+    {
+      "title": "Game Designer",
+      "company": "CEGI — Universidade Federal de São Paulo (Unifesp)",
+      "duration": "November 2020 — February 2023",
+      "location": "São Paulo, Brazil",
+      "responsibilities": [
+        "Design and development of multiple educational games made for public schools by the extension program group at Unifesp, CEGI (Center for Games and Internet Studies)."
+      ]
+    }
+  ]
+}

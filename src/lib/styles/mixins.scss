@@ -10,17 +10,90 @@
   border: var(--border-width) solid var(--border-color);
 }
 
-@mixin transition($function: ease) {
-  transition-property: all;
-  transition-duration: 150ms;
-  transition-timing-function: $function;
+@mixin transition($duration: 0.3s, $function: ease) {
+  transition: {
+    property: all;
+    duration: $duration;
+    timing-function: $function;
+  }
 }
 
-@mixin color-gradient(
-  $color1: var(--theme-blue-1),
-  $color2: var(--theme-blue-2)
-) {
-  background: linear-gradient(90deg, $color1 0%, $color2 100%);
-  color: transparent;
-  background-clip: text;
+@mixin fade-in($duration: 0.65s, $function: ease) {
+  animation: {
+    name: fadeIn;
+    duration: $duration;
+    timing-function: $function;
+    direction: forwards;
+  }
+}
+
+@mixin slide-in($duration: 0.65s, $function: ease) {
+  animation: {
+    name: slideIn;
+    duration: $duration;
+    timing-function: $function;
+    direction: forwards;
+  }
+}
+
+@mixin text-underline($color, $thickness: 0.175em) {
+  text-decoration: {
+    line: underline;
+    style: solid;
+    color: $color;
+    thickness: $thickness;
+  }
+}
+
+@mixin section-title {
+  font: {
+    family: var(--font-mono);
+    weight: 800;
+    size: 2.25rem;
+  }
+  line-height: 1.25;
+  padding: {
+    bottom: 1.5rem;
+  }
+}
+
+@mixin article {
+  line-height: 1.625;
+  font-size: 1.125rem;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  @media screen and (min-width: 820px) {
+    max-width: 36rem;
+  }
+}
+
+@mixin link($color) {
+  @include text-underline($color);
+
+  color: var(--text-color-normal);
+  font-weight: 600;
+  padding: {
+    left: 0.125rem;
+    right: 0.125rem;
+  }
+  &:hover {
+    color: var(--text-color-stronger);
+    text-decoration-color: var(--theme-color-strong);
+  }
+
+  &::after {
+    content: "↗";
+    font: {
+      family: var(--font-sans);
+      weight: 900;
+      size: 0.75em;
+    }
+  }
 }

@@ -1,0 +1,43 @@
+{
+  "ongoing": [
+    {
+      "title": "Sol",
+      "href": "https://github.com/mtaciano/sol",
+      "description": "The sol language, the spiritual successor of the C- language, developed to compile human-readable code into FPGMIPS machine code.",
+      "languages": "Rust"
+    },
+    {
+      "title": "redapro",
+      "href": "https://github.com/mtaciano/redapro",
+      "description": "A by-the-spec implementation of the Reliable Data Protocol. A UDP-layer implementation that can guarantee the integrity and reliability of the communications made using it, as if the user were using TCP sockets.",
+      "languages": "C"
+    }
+  ],
+
+  "finished": [
+    {
+      "title": "FPGMIPS",
+      "href": "https://github.com/mtaciano/fpgmips",
+      "description": "A fully functional CPU based on the 32-bit RISC MIPS mono-cycle architecture. With it also comes an OS capable of preempting user-compiled programs. Those programs are currently written in C-, and in the future they should be capable of being written in sol.",
+      "languages": "Verilog, C-"
+    },
+    {
+      "title": "CMC",
+      "href": "https://github.com/mtaciano/cmc",
+      "description": "A compiler for the C- language, a subset of C. Created to be used with the FPGMIPS CPU. This compiler receives human-readable code as an input and outputs machine code instructions specifically tailored to the FPGMIPS CPU. Written partially in C and Rust, as it was the time when I was first experimenting with the language.",
+      "languages": "C, Rust, Flex, Bison"
+    },
+    {
+      "title": "UART-Phone",
+      "href": "https://github.com/mtaciano/uart-phone",
+      "description": "A simulation of the capabilities of conversing between two cellphones using FPGAs. This is done using Bluetooth. As the FPGAs connect with each other, they use the UART protocol to communicate between themselves.",
+      "languages": "Verilog."
+    },
+    {
+      "title": "mempager",
+      "href": "https://github.com/mtaciano/mempager",
+      "description": "A simulation of two different implemented paging algorithms hit-and-miss ratios as they move pages from the swap to the RAM and vice versa.",
+      "languages": "C"
+    }
+  ]
+}

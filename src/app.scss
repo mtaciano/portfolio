@@ -128,7 +128,7 @@ ul {
   color: var(--text-color-weak);
 
   --border-color: var(--text-color-faint);
-  --border-width: 2px;
+  --border-width: 1px;
   --border-radius: 1.25rem;
   --border-inner-radius: 1rem;
 
@@ -138,7 +138,7 @@ ul {
   --button-selected-background: var(--theme-color-fainter);
   --button-inner-size: 2.5rem;
 
-  --font-serif: "Frank Ruhl Libre", serif;
+  --font-serif: "Abril Fatface", serif;
   --font-sans: "Lexend", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
@@ -200,12 +200,11 @@ ul {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Frank Ruhl Libre (Serif) */
+/* Abril Fatface (Serif) */
 @font-face {
-  font-family: "Frank Ruhl Libre";
-  src: url("/fonts/frank_ruhl_libre/frank_ruhl_libre.woff2") format(woff2);
-  font-optical-sizing: auto;
-  font-weight: 300 900;
+  font-family: "Abril Fatface";
+  src: url("/fonts/abril_fatface/abril_fatface.woff2") format(woff2);
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -236,4 +235,26 @@ ul {
   font-weight: 100 800;
   font-style: italic;
   font-display: swap;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -12,6 +12,8 @@
   }
 
   .outer {
+    @include fade-in;
+
     margin: {
       top: 5rem;
       bottom: 5rem;
