@@ -27,7 +27,7 @@
   }
 }
 
-@mixin slide-in($duration: 0.65s, $function: ease) {
+@mixin slide-in($duration: 0.325s, $function: ease) {
   animation: {
     name: slideIn;
     duration: $duration;

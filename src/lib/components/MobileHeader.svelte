@@ -4,7 +4,7 @@
   import ChangeAppearance from "$lib/components/ChangeAppearance.svelte";
   import { clickOutside } from "$lib/click_outside.js";
   import { page } from "$app/stores";
-  import { fly } from "svelte/transition";
+  import { fade } from "svelte/transition";
 
   const pages = [
     { title: "About", href: "/" },
@@ -31,7 +31,7 @@
     <HamburgerMenu bind:isOpen />
 
     {#if isOpen}
-      <nav out:fly={{ duration: 650, y: "5rem" }}>
+      <nav out:fade={{ duration: 325 }}>
         <ul>
           {#each Object.entries(pages) as [_, { title, href }]}
             <li class="nav-item">
