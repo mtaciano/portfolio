@@ -1,7 +1,7 @@
 <script>
   import { Github, Linkedin, Mail } from "lucide-svelte";
 
-  const strokeWidth = 2.25;
+  const strokeWidth = 2;
   const size = "1.875rem";
   const color = "var(--button-color)";
 

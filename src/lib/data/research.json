@@ -1,0 +1,11 @@
+{
+  "published": [
+    {
+      "title": "SegSemPuzzle: Solving Jigsaw Puzzles with Semantic Segmentation",
+      "href": "https://doi.org/10.5753/wvc.2023.27545",
+      "publisher": "Workshop de Visão Computacional (WVC) — SBC-OpenLib",
+      "date": "November 2023",
+      "abstract": "The traditional Jigsaw Puzzle is a challenging task performed by humans, mainly due to its hardness and proven to be a NP-Complete problem. Even so, recent efforts show better performance in this task using different methods involving complex computer vision and machine learning techniques. In this sense, this paper proposes new approaches based on the semantic segmentation (SS) task to solve jigsaw puzzles (visual puzzles) in reduced training scenario. To the best of our knowledge, this is the first work in the literature that uses SS for the target application. In the performed experiments, it was possible to demonstrate that SegSemPuzzle and SegSemPuzzle-G obtained excellent results when compared with other approaches existing in literature for 3 × 3 puzzle solving tasks."
+    }
+  ]
+}

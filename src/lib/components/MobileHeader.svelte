@@ -4,6 +4,7 @@
   import ChangeAppearance from "$lib/components/ChangeAppearance.svelte";
   import { clickOutside } from "$lib/click_outside.js";
   import { page } from "$app/stores";
+  import { fly } from "svelte/transition";
 
   const pages = [
     { title: "About", href: "/" },
@@ -30,7 +31,7 @@
     <HamburgerMenu bind:isOpen />
 
     {#if isOpen}
-      <nav>
+      <nav out:fly={{ duration: 650, y: "5rem" }}>
         <ul>
           {#each Object.entries(pages) as [_, { title, href }]}
             <li class="nav-item">
@@ -92,8 +93,10 @@
 
   nav {
     @include border;
+    @include slide-in;
 
     position: absolute;
+    z-index: 999;
     left: 0.625rem;
     right: 0.625rem;
     top: calc(4.5rem + 0.625rem); /* header height + space */
