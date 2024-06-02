@@ -5,6 +5,7 @@
   import { clickOutside } from "$lib/click_outside.js";
   import { page } from "$app/stores";
   import { fade } from "svelte/transition";
+  import { cubicOut } from "svelte/easing";
 
   const pages = [
     { title: "About", href: "/" },
@@ -31,7 +32,7 @@
     <HamburgerMenu bind:isOpen />
 
     {#if isOpen}
-      <nav out:fade={{ duration: 325 }}>
+      <nav out:fade={{ duration: 250, easing: cubicOut }}>
         <ul>
           {#each Object.entries(pages) as [_, { title, href }]}
             <li class="nav-item">
@@ -58,6 +59,8 @@
 
 <style lang="scss">
   .outer {
+    @include fade-in;
+
     display: flex;
     flex-flow: row;
     width: 100%;
@@ -65,17 +68,17 @@
 
     > * {
       margin: {
-        top: 0.625rem;
-        bottom: 0.625rem;
-        left: 1.25rem;
+        top: 1rem;
+        bottom: 1rem;
+        left: 1rem;
         right: auto;
       }
     }
 
     > *:nth-last-child(1) {
       margin: {
-        left: 0.625rem;
-        right: 1.25rem;
+        left: 1rem;
+        right: 1rem;
       }
     }
 
@@ -93,22 +96,22 @@
 
   nav {
     @include border;
-    @include slide-in;
+    @include slide-bottom-top($duration: 0.5s);
 
     position: absolute;
     z-index: 999;
-    left: 0.625rem;
-    right: 0.625rem;
-    top: calc(4.5rem + 0.625rem); /* header height + space */
-    background-color: var(--bg-color);
+    left: 1rem;
+    right: 1rem;
+    top: (4.8rem + 1rem); /* header height (approx) + 1rem */
+    background-color: var(--background-color);
   }
 
   .nav-item {
     @include flex-center(column);
 
     padding: {
-      top: 0.625rem;
-      bottom: 0.625rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
     }
     border-bottom: {
       style: solid;
@@ -117,9 +120,9 @@
     border-image: {
       source: linear-gradient(
         to right,
-        transparent 0 25%,
-        var(--border-color) 25% 75%,
-        transparent 75% 100%
+        transparent 0 20%,
+        var(--border-color) 20% 80%,
+        transparent 80% 100%
       );
       slice: 1;
     }
@@ -130,15 +133,10 @@
 
     &-anchor {
       @include flex-center(column);
+      @include text-underline(transparent);
       @include transition;
 
-      color: var(--text-color-weaker);
-      text-decoration: {
-        line: underline;
-        style: solid;
-        color: transparent;
-        thickness: 0.175em;
-      }
+      color: var(--color-inactive);
       font: {
         family: var(--font-mono);
         weight: 800;
@@ -147,22 +145,23 @@
       padding: {
         /* Add some breathing room for the text */
         top: 0.25rem;
-        bottom: calc(0.25rem + 0.175em); /* Center text with underline */
+        bottom: 0.25rem;
       }
 
       &:hover {
-        color: var(--text-color-weak);
-        text-decoration-color: var(--theme-color-faint);
+        color: var(--color-weak);
+        text-decoration-color: var(--theme-color-weaker);
       }
     }
 
     &-current {
-      color: var(--text-color-strong);
+      color: var(--color-strong);
       text-decoration-color: var(--theme-color-weak);
+      padding-bottom: calc(0.25rem + 0.175em); /* Center text with underline */
 
       &:hover,
       &:active {
-        color: var(--text-color-strong);
+        color: var(--color-strong);
         text-decoration-color: var(--theme-color-weak);
       }
     }

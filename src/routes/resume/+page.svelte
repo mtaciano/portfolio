@@ -2,9 +2,17 @@
   import { professional, academic, volunteer } from "$lib/data/resume.json";
 
   const sections = [
-    { title: "Professional Experience", jobs: professional },
-    { title: "Academic Background", jobs: academic },
-    { title: "Volunteer Experience", jobs: volunteer },
+    {
+      title: "Professional Experience",
+      jobs: professional,
+      slide: "slide-left-right",
+    },
+    { title: "Academic Background", jobs: academic, slide: "slide-right-left" },
+    {
+      title: "Volunteer Experience",
+      jobs: volunteer,
+      slide: "slide-left-right",
+    },
   ];
   const resume = "/pdfs/mtaciano_resume.pdf";
 </script>
@@ -40,19 +48,20 @@
 
 <div class="outer">
   <article>
-    <div class="section">
+    <div class="section slide-right-left">
       <h3 class="section-title">Introduction</h3>
       <p>
-        Graduate in Computer Engineering at the Federal University of São Paulo
-        (Unifesp). One year's experience in data analysis for Johnson &amp
-        Johnson. Knowledge in multiple areas such as data analysis, machine
-        learning, web development and embedded systems. Looking for
-        opportunities in areas related to those mentioned above.
+        Computer Engineering degree from Universidade Federal de São Paulo
+        (Unifesp). One year's experience in data analysis and automated testing
+        for Johnson &amp; Johnson. Knowledge in several areas such as data
+        analysis, machine learning, front-end and back-end development,
+        automated testing and embedded systems. Looking for opportunities in
+        areas related to those mentioned above.
       </p>
     </div>
 
-    {#each sections as { title, jobs }}
-      <div class="section">
+    {#each sections as { title, jobs, slide }}
+      <div class="section {slide}">
         <h3 class="section-title">{title}</h3>
         {#each jobs as { title, company, duration, location, responsibilities }}
           {@render job(title, company, duration, location, responsibilities)}
@@ -61,41 +70,45 @@
     {/each}
 
     <p class="center">
-      You can also view my résumé in <a href={resume}>PDF format</a>.
+      You can also view my résumé in&nbsp;<a href={resume}>PDF format</a>.
     </p>
   </article>
 </div>
 
 <style lang="scss">
   .outer {
-    @include fade-in;
+    padding-top: 10rem;
+    overflow-x: hidden;
 
-    padding-top: 3rem;
+    @media screen and (max-width: $transition-size) {
+      padding-top: 3rem;
+    }
   }
 
   .job {
     &-title {
-      @include text-underline(var(--theme-color-faint));
+      @include text-underline(var(--theme-color-weaker));
 
-      color: var(--text-color-normal);
+      color: var(--color-strong);
       font: {
         family: var(--font-mono);
-        size: 1.625rem;
+        size: 1.5rem;
         weight: 900;
       }
     }
 
     &-company {
       display: block;
+      color: var(--color-normal);
       font: {
         size: 1.25rem;
-        weight: 500;
+        weight: 600;
       }
     }
 
     &-duration {
       display: block;
-      color: var(--text-color-weaker);
+      color: var(--color-weak);
       font-size: 1rem;
     }
 
@@ -116,9 +129,9 @@
 
     &-title {
       @include section-title;
-      @include text-underline(var(--theme-color-weaker));
+      @include text-underline(var(--theme-color-normal));
 
-      color: var(--text-color-strong);
+      color: var(--color-strong);
     }
   }
 
@@ -127,6 +140,16 @@
     @include flex-center;
 
     flex-wrap: wrap;
+  }
+
+  .slide {
+    &-left-right {
+      @include slide-left-right;
+    }
+
+    &-right-left {
+      @include slide-right-left;
+    }
   }
 
   a {

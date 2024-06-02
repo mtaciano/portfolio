@@ -2,8 +2,8 @@
   import { ongoing, finished } from "$lib/data/projects.json";
 
   const sections = [
-    { title: "Ongoing", projects: ongoing },
-    { title: "Finished", projects: finished },
+    { title: "Ongoing", projects: ongoing, slide: "slide-right-left" },
+    { title: "Finished", projects: finished, slide: "slide-left-right" },
   ];
 </script>
 
@@ -29,8 +29,8 @@
 
 <div class="outer">
   <article>
-    {#each sections as { title, projects }}
-      <div class="section">
+    {#each sections as { title, projects, slide }}
+      <div class="section {slide}">
         <h3 class="section-title">{title}</h3>
 
         {#each projects as { title, href, description, languages }}
@@ -43,9 +43,12 @@
 
 <style lang="scss">
   .outer {
-    @include fade-in;
+    padding-top: 10rem;
+    overflow-x: hidden;
 
-    padding-top: 3rem;
+    @media screen and (max-width: $transition-size) {
+      padding-top: 3rem;
+    }
   }
 
   .bold {
@@ -56,12 +59,12 @@
     padding-bottom: 1.5rem;
 
     &-title {
-      @include text-underline(var(--theme-color-faint));
+      @include text-underline(var(--theme-color-weaker));
 
-      color: var(--text-color-normal);
+      color: var(--color-strong);
       font: {
         family: var(--font-mono);
-        size: 1.625rem;
+        size: 1.5rem;
         weight: 900;
       }
     }
@@ -72,7 +75,7 @@
 
     &-languages {
       display: block;
-      color: var(--text-color-weaker);
+      color: var(--color-weak);
       font-size: 1rem;
     }
   }
@@ -82,9 +85,19 @@
 
     &-title {
       @include section-title;
-      @include text-underline(var(--theme-color-weaker));
+      @include text-underline(var(--theme-color-normal));
 
-      color: var(--text-color-strong);
+      color: var(--color-strong);
+    }
+  }
+
+  .slide {
+    &-left-right {
+      @include slide-left-right;
+    }
+
+    &-right-left {
+      @include slide-right-left;
     }
   }
 

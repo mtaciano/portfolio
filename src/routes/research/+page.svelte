@@ -29,7 +29,7 @@
 
 <div class="outer">
   <article>
-    <div class="section">
+    <div class="section slide-right-left">
       <h3 class="section-title">Published Papers</h3>
 
       {#each published as { title, href, publisher, date, abstract }}
@@ -41,9 +41,12 @@
 
 <style lang="scss">
   .outer {
-    @include fade-in;
+    padding-top: 10rem;
+    overflow-x: hidden;
 
-    padding-top: 3rem;
+    @media screen and (max-width: $transition-size) {
+      padding-top: 3rem;
+    }
   }
 
   .section {
@@ -51,35 +54,36 @@
 
     &-title {
       @include section-title;
-      @include text-underline(var(--theme-color-weaker));
+      @include text-underline(var(--theme-color-normal));
 
-      color: var(--text-color-strong);
+      color: var(--color-strong);
     }
   }
 
   .paper {
     &-title {
-      @include text-underline(var(--theme-color-faint));
+      @include text-underline(var(--theme-color-weaker));
 
-      color: var(--text-color-normal);
+      color: var(--color-strong);
       font: {
-        family: var(--font-serif);
-        size: 1.625rem;
+        family: var(--font-mono);
+        size: 1.5rem;
         weight: 900;
       }
     }
 
     &-publisher {
       display: block;
+      color: var(--color-normal);
       font: {
         size: 1.25rem;
-        weight: 500;
+        weight: 600;
       }
     }
 
     &-date {
       display: block;
-      color: var(--text-color-weaker);
+      color: var(--color-weak);
       font-size: 1rem;
     }
 
@@ -92,6 +96,12 @@
         bottom: 1.5rem;
         left: 2rem;
       }
+    }
+  }
+
+  .slide {
+    &-right-left {
+      @include slide-right-left;
     }
   }
 
