@@ -5,7 +5,6 @@
   const gpgKey = "/pubkeys/mtaciano.gpg.asc";
   const svelteKit = "https://kit.svelte.dev";
   const lucide = "https://lucide.dev";
-  const simpleIcons = "https://simpleicons.org";
   const mit = "https://opensource.org/license/mit";
 </script>
 
@@ -28,32 +27,31 @@
     </div>
   </div>
   <div class="lower">
-    <p>Made with <a target="_blank" href={svelteKit}>SvelteKit</a></p>
     <p>
-      Icons by <a target="_blank" href={lucide}>Lucide</a> and
-      <a target="_blank" href={simpleIcons}>Simple Icons</a>
+      Icons by <a target="_blank" href={lucide}>Lucide</a>
     </p>
+    <p>Made with <a target="_blank" href={svelteKit}>SvelteKit</a></p>
     <p>(c) 2024 Miguel Silva Taciano (<a target="_blank" href={mit}>MIT</a>)</p>
   </div>
 </footer>
 
 <style lang="scss">
   * {
-    color: var(--text-color-weaker);
+    color: var(--color-weak);
     font: {
       family: var(--font-mono);
-      size: 0.875rem;
+      size: 0.85rem;
       weight: 600;
     }
-    letter-spacing: -0.025rem;
   }
 
   .outer {
     @include flex-center(column);
+    @include fade-in;
 
     padding: {
-      top: 0.625rem;
-      bottom: 0.625rem;
+      top: 1rem;
+      bottom: 0.5rem;
     }
     margin: {
       top: 2rem;
@@ -63,7 +61,7 @@
     border-top: {
       style: solid;
       width: var(--border-width);
-      color: var(--text-color-faint);
+      color: var(--border-color);
     }
     max-width: 28rem;
   }
@@ -73,19 +71,19 @@
 
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.5rem;
   }
 
   .lower {
     @include flex-center(column);
 
-    gap: 0.625rem;
+    gap: 0.5rem;
   }
 
   .keys {
     @include flex-center(column);
 
-    gap: 0.625rem;
+    gap: 0.5rem;
   }
 
   abbr {
@@ -95,18 +93,10 @@
 
   a {
     @include transition;
+    @include link(var(--theme-color-weaker));
 
-    color: var(--text-color-weak);
-    text-decoration: {
-      line: underline;
-      style: solid;
-      color: var(--theme-color-weaker);
-      thickness: 0.175em;
-    }
-
-    &:hover {
-      color: var(--text-color-strong);
-      text-decoration-color: var(--theme-color-weak);
+    &::after {
+      content: none;
     }
   }
 </style>

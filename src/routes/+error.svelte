@@ -14,36 +14,31 @@
   }
 
   .outer {
-    margin: {
-      top: 5rem;
-      bottom: 5rem;
+    padding-top: 10rem;
+
+    @media screen and (max-width: $transition-size) {
+      padding-top: 3rem;
     }
   }
 
   h1 {
-    color: var(--text-color-strong);
-    font: {
-      size: clamp(8rem, 20vw, 10rem);
-      weight: 900;
-    }
-    line-height: 1;
+    @include text-underline(var(--theme-color-strong));
 
-    text-decoration: {
-      line: underline;
-      style: solid;
-      color: var(--theme-color-weaker);
-      thickness: 0.175em;
+    color: var(--color-strong);
+    text-decoration-thickness: 0.15em; /* In this case 0.2em is *too* big */
+    font: {
+      size: clamp(10rem, 8.2609rem + 8.6957vi, 15rem);
+      weight: 900;
     }
     padding-bottom: 2rem;
   }
 
   h2 {
-    color: var(--text-color-normal);
+    color: var(--color-normal);
     font: {
       size: 2.5rem;
       weight: 600;
     }
-    line-height: 1.5;
   }
 
   h3 {
@@ -55,32 +50,6 @@
 
   a {
     @include transition;
-
-    color: var(--text-color-normal);
-    font-weight: 600;
-    padding: {
-      left: 0.125rem;
-      right: 0.125rem;
-    }
-    text-decoration: {
-      line: underline;
-      style: solid;
-      color: var(--theme-color-weaker);
-      thickness: 0.175em;
-    }
-
-    &:hover {
-      color: var(--text-color-stronger);
-      text-decoration-color: var(--theme-color-strong);
-    }
-
-    &::after {
-      content: "↗";
-      font: {
-        family: var(--font-sans);
-        weight: 900;
-        size: 0.75em;
-      }
-    }
+    @include link(var(--theme-color-weaker));
   }
 </style>

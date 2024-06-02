@@ -14,24 +14,28 @@
   .outer {
     @include fade-in;
 
-    margin: {
-      top: 5rem;
-      bottom: 5rem;
+    padding: {
+      top: 12rem;
+      bottom: 10rem;
+    }
+
+    @media screen and (max-width: $transition-size) {
+      padding: {
+        top: 5rem;
+        bottom: 5rem;
+      }
     }
   }
 
   h1 {
-    color: var(--text-color-strong);
+    @include text-underline(var(--theme-color-normal));
+
+    color: var(--color-strong);
+    letter-spacing: 0.05em;
     font: {
       family: var(--font-serif);
       size: clamp(4.125rem, 10vw, 6.125rem);
       weight: 900;
-    }
-    text-decoration: {
-      line: underline;
-      style: solid;
-      color: var(--theme-color-normal);
-      thickness: 0.175em;
     }
     padding: {
       left: 1rem;

@@ -1,5 +1,50 @@
 @import "../node_modules/modern-normalize/modern-normalize.css";
 
+/* Abril Fatface (Serif) */
+@font-face {
+  font-family: "Abril Fatface";
+  src: url("/fonts/abril_fatface/abril_fatface.woff2") format(woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hanken Grotesk (Sans Serif) */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/fonts/hk/hk.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/fonts/hk/hk_italic.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* JetBrains Mono (Monospace) */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains_mono/jetbrains_mono.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains_mono/jetbrains_mono_italic.woff2") format(woff2);
+  font-optical-sizing: auto;
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 /*
  * Remove all of the default margins from elements like headings, blockquotes,
  * paragraphs, etc.
@@ -86,111 +131,136 @@ ul {
 :root {
   @include transition;
 
-  /* Contrast colors */
-  --oxford-blue: #000829;
-  --phthalo-blue: #011890;
-  --egyptian-blue: #20329c;
-  --violet-blue: #3f4ca8;
-  --glaucous: #7d7fbf;
-  --thistle: #bbb2d7;
-  --lavender: #d7d2e8;
-  --ghost-white: #f3f2f8;
+  /* Chromatic */
+  --chocolate-cosmos: #590d22ff;
+  --claret: #800f2fff;
+  --amaranth-purple: #a4133cff;
+  --rose-red: #c9184aff;
+  --bright-pink-crayola: #ff4d6dff;
+  --bright-pink-crayola-2: #ff758fff;
+  --salmon-pink: #ff8fa3ff;
+  --cherry-blossom-pink: #ffb3c1ff;
+  --pink: #ffccd5ff;
+  --lavender-blush: #fff0f3ff;
 
-  --theme-color-fainter: var(--lavender);
-  --theme-color-faint: var(--thistle);
-  --theme-color-weaker: var(--glaucous);
-  --theme-color-weak: var(--violet-blue);
-  --theme-color-normal: var(--egyptian-blue);
-  --theme-color-strong: var(--phthalo-blue);
-  --theme-color-stronger: var(--oxford-blue);
+  /* Monochrome */
+  --eerie-black: #212529;
+  --onyx: #343a40;
+  --outer-space: #495057;
+  --slate-gray: #6c757d;
+  --french-gray: #adb5bd;
+  --french-gray-lighter: #ced4da;
+  --platinum: #dee2e6;
+  --anti-flash-white: #e9ecef;
+  --seasalt: #f8f9fa;
+
+  /* Theme Color */
+  --theme-color-fainter: var(--salmon-pink);
+  --theme-color-faint: var(--bright-pink-crayola-2);
+  --theme-color-weaker: var(--bright-pink-crayola);
+  --theme-color-weak: var(--rose-red);
+  --theme-color-normal: var(--amaranth-purple);
+  --theme-color-strong: var(--claret);
+  --theme-color-stronger: var(--chocolate-cosmos);
 
   /* Background color */
-  --bg-color: var(--ghost-white);
-  background-color: var(--bg-color);
+  --background-color: var(--seasalt);
+  background-color: var(--background-color);
 
-  /* Text colors */
-  --richier-black: #030712;
-  --rich-black: #131721;
-  --raisin-black: #222630;
-  --charcoal: #41444d;
-  --gray: #7e8187;
-  --silver: #bdbec1;
-  --platinum: #dbdcde;
-  --seasalt: #f9fafb;
+  /* Text color */
+  --color-inactive: var(--slate-gray);
+  --color-weak: var(--outer-space);
+  --color-normal: var(--onyx);
+  --color-strong: var(--eerie-black);
+  --color-inverted-inactive: var(--french-gray);
+  --color-inverted-weak: var(--platinum);
+  --color-inverted-normal: var(--anti-flash-white);
+  --color-inverted-strong: var(--seasalt);
+  color: var(--color-normal);
 
-  --text-color-fainter: var(--platinum);
-  --text-color-faint: var(--silver);
-  --text-color-weaker: var(--gray);
-  --text-color-weak: var(--charcoal);
-  --text-color-normal: var(--raisin-black);
-  --text-color-strong: var(--rich-black);
-  --text-color-stronger: var(--richier-black);
-  color: var(--text-color-weak);
-
-  --border-color: var(--text-color-faint);
+  /* Border */
+  --border-color: var(--french-gray);
   --border-width: 1px;
-  --border-radius: 1.25rem;
-  --border-inner-radius: 1rem;
+  --border-radius: 0.5rem;
+  --border-inner-radius: 0.5rem;
 
-  --button-size: 3.125rem;
-  --button-color: var(--text-color-weak);
-  --button-active-background: var(--theme-color-faint);
-  --button-selected-background: var(--theme-color-fainter);
-  --button-inner-size: 2.5rem;
+  /* Button */
+  --button-size: 2.75rem;
+  --button-color: var(--outer-space);
+  --button-hover-color: var(--onyx);
+  --button-active-background: var(--platinum);
+  --button-selected-background: var(--anti-flash-white);
+  --button-inner-size: 2.25rem;
 
   --font-serif: "Abril Fatface", serif;
-  --font-sans: "Lexend", sans-serif;
+  --font-sans: "Hanken Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
+  /* Set HMTL to *at least* 100% of the browser height */
   min-height: 100%;
 }
 
 .dark {
-  --ultra-violet: #68699e;
-  --wisteria: #aca6d1;
-  --platinum: #e0e0e0;
-  --seasalt: #fcfcfc;
-  --anti-flash-white: #eeeeee;
-  --white: #fefefe;
-  --cadet-gray: #a1a1a1;
-  --thistle: #bbb2d7;
-  --gray: #818181;
-  --silver: #d0d0d0;
-  --english-violet: #585885;
-  --lavender: #d9d3e8;
-  --space-cadet: #3b3b59;
-  --night: #0a0a0a;
+  /* TODO: Better dark theme */
+
+  /* Chromatic */
+  --chocolate-cosmos: #590d22ff;
+  --claret: #800f2fff;
+  --amaranth-purple: #a4133cff;
+  --rose-red: #c9184aff;
+  --bright-pink-crayola: #ff4d6dff;
+  --bright-pink-crayola-2: #ff758fff;
+  --salmon-pink: #ff8fa3ff;
+  --cherry-blossom-pink: #ffb3c1ff;
+  --pink: #ffccd5ff;
+  --lavender-blush: #fff0f3ff;
+
+  /* Monochrome */
+  --eerie-black: #212529;
+  --onyx: #343a40;
+  --outer-space: #495057;
+  --slate-gray: #6c757d;
+  --french-gray: #adb5bd;
+  --french-gray-lighter: #ced4da;
+  --platinum: #dee2e6;
+  --anti-flash-white: #e9ecef;
+  --seasalt: #f8f9fa;
 
   /* Contrast colors */
-  --theme-color-stronger: var(--lavender);
-  --theme-color-strong: var(--thistle);
-  --theme-color-normal: var(--wisteria);
-  --theme-color-weak: var(--glaucous);
-  --theme-color-weaker: var(--ultra-violet);
-  --theme-color-faint: var(--english-violet);
-  --theme-color-fainter: var(--space-cadet);
+  --theme-color-fainter: var(--amaranth-purple);
+  --theme-color-faint: var(--rose-red);
+  --theme-color-weaker: var(--bright-pink-crayola);
+  --theme-color-weak: var(--bright-pink-crayola-2);
+  --theme-color-normal: var(--salmon-pink);
+  --theme-color-strong: var(--cherry-blossom-pink);
+  --theme-color-stronger: var(--pink);
 
   /* Background color */
-  --bg-color: var(--night);
+  --background-color: var(--eerie-black);
 
   /* Text colors */
-  --text-color-stronger: var(--seasalt);
-  --text-color-strong: var(--anti-flash-white);
-  --text-color-normal: var(--platinum);
-  --text-color-weak: var(--silver);
-  --text-color-weaker: var(--cadet-gray);
-  --text-color-faint: var(--gray);
-  --text-color-fainter: var(--rich-black);
+  --color-inactive: var(--french-gray);
+  --color-weak: var(--platinum);
+  --color-normal: var(--anti-flash-white);
+  --color-strong: var(--seasalt);
+  --color-inverted-inactive: var(--french-gray);
+  --color-inverted-weak: var(--outer-space);
+  --color-inverted-normal: var(--onyx);
+  --color-inverted-strong: var(--eerie-black);
 
   /* Update state (don't change) */
-  color: var(--text-color-weak);
-  background-color: var(--bg-color);
-  --border-color: var(--text-color-faint);
-  --button-color: var(--text-color-weak);
-  --button-active-background: var(--theme-color-weak);
-  --button-selected-background: var(--theme-color-weaker);
-  --button-active-background: var(--theme-color-faint);
-  --button-selected-background: var(--theme-color-fainter);
+  color: var(--color-normal);
+  background-color: var(--background-color);
+  --border-color: var(--french-gray);
+  --button-color: var(--platinum);
+  --button-hover-color: var(--anti-flash-white);
+  --button-active-background: var(--outer-space);
+  --button-selected-background: var(--onyx);
+}
+
+body {
+  /* Always keep the scroll bar to avoid content shifting */
+  overflow-y: scroll;
 }
 
 * {
@@ -198,43 +268,6 @@ ul {
 
   /* Remove blue highlight when tapping in a mobile device */
   -webkit-tap-highlight-color: transparent;
-}
-
-/* Abril Fatface (Serif) */
-@font-face {
-  font-family: "Abril Fatface";
-  src: url("/fonts/abril_fatface/abril_fatface.woff2") format(woff2);
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Lexend (Sans Serif) */
-@font-face {
-  font-family: "Lexend";
-  src: url("/fonts/lexend/lexend.woff2") format(woff2);
-  font-optical-sizing: auto;
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* JetBrains Mono (Monospace) */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrains_mono/jetbrains_mono.woff2") format(woff2);
-  font-optical-sizing: auto;
-  font-weight: 100 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrains_mono/jetbrains_mono_italic.woff2") format(woff2);
-  font-optical-sizing: auto;
-  font-weight: 100 800;
-  font-style: italic;
-  font-display: swap;
 }
 
 @keyframes fadeIn {
@@ -247,7 +280,19 @@ ul {
   }
 }
 
-@keyframes slideIn {
+@keyframes slideTopBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideBottomTop {
   0% {
     opacity: 0;
     transform: translateY(5rem);
@@ -256,5 +301,29 @@ ul {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

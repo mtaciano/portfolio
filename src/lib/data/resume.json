@@ -6,10 +6,10 @@
       "duration": "February 2023 — January 2024",
       "location": "São Paulo, Brazil",
       "responsibilities": [
-        "Development and maintenance of an information and utilities portal for use by all latin american countries.",
-        "Creation of technical documentation for dashboards containing crucial information for new users to understand these metrics.",
-        "Development of new dashboards, allowing monitoring and better decision-making by the various teams involved in the project.",
-        "Monitoring and classifying of thousands of users across related products, in order to label and categorize consumption patterns with the ultimate aim of improving the product, thus increasing the company's KPIs."
+        "Development and maintenance of an information and services website for use by medical professionals in all Latin American countries. Using regression and integration tests through Cypress and Jenkins, enabling uninterrupted development and delivery of the product.",
+        "Monitoring and classifying of thousands of users across related products, using the Google and Microsoft suite of tools (Power BI, Tag Manager, Analytics, Data Studio), in order to label and categorize usage patterns in order to improve the end-user experience.",
+        "Design of new dashboards, enabling better monitoring and decision-making for the multiple teams involved in the project. As well as the creation of technical documentation for dashboards containing crucial information for the understanding of new consumers of such metrics.",
+        "Effective and continuous communication with different teams from different countries, showing the ability to communicate in English on both technical and business level subjects."
       ]
     },
     {
@@ -18,8 +18,8 @@
       "duration": "May 2022 — December 2023",
       "location": "São Paulo, Brazil",
       "responsibilities": [
-        "Research and comparative analysis of state-of-the-art visual-puzzle solving methods using machine learning (mainly reinforcement learning) and computer vision aproaches, such as semantic segmentation.",
-        "Development of a state-of-the-art method of solving visual-puzzle problems, using machine learning and semantic segmentation."
+        "Study and comparative analysis of puzzle solving methods using machine learning and computer vision approaches. Implementation carried out primarily in Python, PyTorch, OpenCV and NumPy. Continuous research on the subject over the course of years, implementing a novel algorithm not yet present in the literature. Subsequently publishing an article in the field.",
+        "Development of an innovative solution to the manual problem of choosing the quantity and shape of aircraft parts to be baked in an industrial oven, as well as the time and temperature levels to be used during the process."
       ]
     }
   ],

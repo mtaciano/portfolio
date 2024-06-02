@@ -10,6 +10,9 @@
       document.documentElement.classList.toggle("dark", isDarkMode);
     }
   });
+
+  const strokeWidth = 2.25;
+  const size = "1.5rem";
 </script>
 
 <button
@@ -20,9 +23,9 @@
 >
   <div class="menu-inner">
     {#if !isDarkMode}
-      <Sun strokeWidth={2} size="1.875rem" color="var(--button-color)" />
+      <Sun {strokeWidth} {size} />
     {:else}
-      <Moon strokeWidth={2} size="1.875rem" color="var(--button-color)" />
+      <Moon {strokeWidth} {size} />
     {/if}
   </div>
 </button>
@@ -30,22 +33,25 @@
 <style lang="scss">
   .menu {
     @include flex-center(column);
+    @include transition;
     @include border;
 
     cursor: pointer;
     height: var(--button-size);
     width: var(--button-size);
-    background-color: transparent;
+    background-color: var(--background-color);
 
     &-inner {
       @include flex-center(column);
       @include transition;
 
+      color: var(--button-color);
       height: var(--button-inner-size);
       width: var(--button-inner-size);
       border-radius: var(--border-inner-radius);
 
       &:hover {
+        color: var(--button-hover-color);
         background-color: var(--button-selected-background);
       }
 

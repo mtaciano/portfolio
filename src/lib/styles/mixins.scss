@@ -10,7 +10,7 @@
   border: var(--border-width) solid var(--border-color);
 }
 
-@mixin transition($duration: 0.3s, $function: ease) {
+@mixin transition($duration: 0.25s, $function: ease-in-out) {
   transition: {
     property: all;
     duration: $duration;
@@ -18,25 +18,52 @@
   }
 }
 
-@mixin fade-in($duration: 0.65s, $function: ease) {
+@mixin fade-in($duration: 0.8s, $delay: 0s, $function: ease) {
   animation: {
     name: fadeIn;
     duration: $duration;
+    delay: $delay;
     timing-function: $function;
-    direction: forwards;
   }
 }
 
-@mixin slide-in($duration: 0.65s, $function: ease) {
+@mixin slide-bottom-top($duration: 0.8s, $delay: 0s, $function: ease-in-out) {
   animation: {
-    name: slideIn;
+    name: slideBottomTop;
     duration: $duration;
+    delay: $delay;
     timing-function: $function;
-    direction: forwards;
   }
 }
 
-@mixin text-underline($color, $thickness: 0.175em) {
+@mixin slide-top-bottom($duration: 0.8s, $delay: 0s, $function: ease-in-out) {
+  animation: {
+    name: slideTopBottom;
+    duration: $duration;
+    delay: $delay;
+    timing-function: $function;
+  }
+}
+
+@mixin slide-left-right($duration: 0.8s, $delay: 0s, $function: ease-in-out) {
+  animation: {
+    name: slideLeftRight;
+    duration: $duration;
+    delay: $delay;
+    timing-function: $function;
+  }
+}
+
+@mixin slide-right-left($duration: 0.8s, $delay: 0s, $function: ease-in-out) {
+  animation: {
+    name: slideRightLeft;
+    duration: $duration;
+    delay: $delay;
+    timing-function: $function;
+  }
+}
+
+@mixin text-underline($color, $thickness: 0.2em) {
   text-decoration: {
     line: underline;
     style: solid;
@@ -46,6 +73,7 @@
 }
 
 @mixin section-title {
+  color: var(--color-strong);
   font: {
     family: var(--font-mono);
     weight: 800;
@@ -58,33 +86,22 @@
 }
 
 @mixin article {
-  line-height: 1.625;
+  line-height: 1.5;
   font-size: 1.125rem;
+  width: min(90%, 36rem);
   margin: {
     left: auto;
     right: auto;
-  }
-  padding: {
-    left: 1rem;
-    right: 1rem;
-  }
-
-  @media screen and (min-width: 820px) {
-    max-width: 36rem;
   }
 }
 
 @mixin link($color) {
   @include text-underline($color);
 
-  color: var(--text-color-normal);
+  color: var(--color-normal);
   font-weight: 600;
-  padding: {
-    left: 0.125rem;
-    right: 0.125rem;
-  }
   &:hover {
-    color: var(--text-color-stronger);
+    color: var(--color-strong);
     text-decoration-color: var(--theme-color-strong);
   }
 
@@ -93,7 +110,7 @@
     font: {
       family: var(--font-sans);
       weight: 900;
-      size: 0.75em;
+      size: 0.7em;
     }
   }
 }
