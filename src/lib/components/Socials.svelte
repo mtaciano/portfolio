@@ -1,9 +1,8 @@
 <script>
   import { Github, Linkedin, Mail } from "lucide-svelte";
 
-  const strokeWidth = 2;
-  const size = "1.875rem";
-  const color = "var(--button-color)";
+  const strokeWidth = 2.25;
+  const size = "1.5rem";
 
   const linkedin = "https://www.linkedin.com/in/mtaciano/";
   const github = "https://www.github.com/mtaciano/";
@@ -12,38 +11,41 @@
 
 <div class="socials">
   <a target="_blank" class="socials-item" href={linkedin} aria-label="LinkedIn">
-    <Linkedin {strokeWidth} {size} {color} />
+    <Linkedin {strokeWidth} {size} />
   </a>
   <a target="_blank" class="socials-item" href={github} aria-label="GitHub">
-    <Github {strokeWidth} {size} {color} />
+    <Github {strokeWidth} {size} />
   </a>
   <a target="_blank" class="socials-item" href={email} aria-label="e-mail">
-    <Mail {strokeWidth} {size} {color} />
+    <Mail {strokeWidth} {size} />
   </a>
 </div>
 
 <style lang="scss">
   .socials {
+    @include transition;
     @include border;
 
-    cursor: pointer;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-inline: 0.25rem;
     height: var(--button-size);
-    width: calc(2.8 * var(--button-size));
+    background-color: var(--background-color);
 
     &-item {
       @include flex-center;
       @include transition;
 
-      color: inherit;
+      cursor: pointer;
+      color: var(--button-color);
       text-decoration: none;
       height: var(--button-inner-size);
       width: var(--button-inner-size);
       border-radius: var(--border-inner-radius);
 
       &:hover {
+        color: var(--button-hover-color);
         background-color: var(--button-selected-background);
       }
 
