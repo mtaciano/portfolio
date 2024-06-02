@@ -35,7 +35,7 @@
   </div>
 
   <article>
-    <h3 class="section-title">About</h3>
+    <h1 class="section-title">About</h1>
 
     <p>
       Hello! My name is Miguel Taciano, and I'm a computer engineer. My most
