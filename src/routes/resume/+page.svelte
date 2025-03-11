@@ -51,12 +51,11 @@
     <div class="section slide-right-left">
       <h3 class="section-title">Introduction</h3>
       <p>
-        Computer Engineering degree from Universidade Federal de São Paulo
-        (Unifesp). One year's experience in data analysis and automated testing
-        for Johnson &amp; Johnson. Knowledge in several areas such as data
-        analysis, machine learning, front-end and back-end development,
-        automated testing and embedded systems. Looking for opportunities in
-        areas related to those mentioned above.
+        Computer Engineer with experience in front and back-end development,
+        embedded systems, and data engineering. Highly proficient in C, Python,
+        TypeScript, and Rust. Focused on delivering high-quality and scalable
+        products. Looking for opportunities to apply my skills in a dedicated
+        software engineering role where I can drive impactful solutions.
       </p>
     </div>
 
