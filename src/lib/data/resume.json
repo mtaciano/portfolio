@@ -1,25 +1,23 @@
 {
   "professional": [
     {
-      "title": "Data Engineer",
+      "title": "Data Engineer & Software Developer",
       "company": "Johnson & Johnson",
       "duration": "February 2023 — January 2024",
-      "location": "São Paulo, Brazil",
+      "location": "São José dos Campos, BR",
       "responsibilities": [
-        "Development and maintenance of an information and services website for use by medical professionals in all Latin American countries. Using regression and integration tests through Cypress and Jenkins, enabling uninterrupted development and delivery of the product.",
-        "Monitoring and classifying of thousands of users across related products, using the Google and Microsoft suite of tools (Power BI, Tag Manager, Analytics, Data Studio), in order to label and categorize usage patterns in order to improve the end-user experience.",
-        "Design of new dashboards, enabling better monitoring and decision-making for the multiple teams involved in the project. As well as the creation of technical documentation for dashboards containing crucial information for the understanding of new consumers of such metrics.",
-        "Effective and continuous communication with different teams from different countries, showing the ability to communicate in English on both technical and business level subjects."
+        "Developed a website used by more than 60,000 medical professionals across all of Latin America.",
+        "Ensured continuous operation through component and integration testing using Cypress, Node.js, and Jenkins.",
+        "Analyzed and tracked more than 350,000 users using Power BI, Google Analytics, and Data Studio."
       ]
     },
     {
-      "title": "Machine Learning Researcher",
+      "title": "Scholarship Researcher",
       "company": "Embraer & CNPq",
       "duration": "May 2022 — December 2023",
-      "location": "São Paulo, Brazil",
+      "location": "São José dos Campos, BR",
       "responsibilities": [
-        "Study and comparative analysis of puzzle solving methods using machine learning and computer vision approaches. Implementation carried out primarily in Python, PyTorch, OpenCV and NumPy. Continuous research on the subject over the course of years, implementing a novel algorithm not yet present in the literature. Subsequently publishing an article in the field.",
-        "Development of an innovative solution to the manual problem of choosing the quantity and shape of aircraft parts to be baked in an industrial oven, as well as the time and temperature levels to be used during the process."
+        "Researched and developed an innovative machine learning and computer vision solution for optimizing the arrangement of aircraft parts in an industrial oven with over 95% accuracy, using Python, PyTorch, and OpenCV. The work was published in an AI-focused article, detailing the problem and its solution."
       ]
     }
   ],
@@ -28,14 +26,14 @@
       "title": "B.Sc. in Computer Engineering",
       "company": "Universidade Federal de São Paulo (Unifesp)",
       "duration": "March 2019 — December 2023",
-      "location": "São Paulo, Brazil",
+      "location": "São José dos Campos, BR",
       "responsibilities": []
     },
     {
       "title": "B.Sc. in Science and Technology",
       "company": "Universidade Federal de São Paulo (Unifesp)",
       "duration": "March 2019 — February 2022",
-      "location": "São Paulo, Brazil",
+      "location": "São José dos Campos, BR",
       "responsibilities": []
     }
   ],
